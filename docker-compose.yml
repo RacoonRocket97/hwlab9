@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+  main-db:
+    image: mysql:8
+    container_name: main-db-container
+    environment:
+      MYSQL_ROOT_PASSWORD: R67792931a!
+      MYSQL_DATABASE: shop_db
+    ports:
+      - "2345:3306"
+
+  test-db:
+    image: mysql:8
+    container_name: test-db-container
+    environment:
+      MYSQL_ROOT_PASSWORD: R67792931a!
+      MYSQL_DATABASE: shop_test_db
+    ports:
+      - "2346:3306"
